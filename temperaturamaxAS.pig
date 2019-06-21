@@ -7,3 +7,5 @@ joincito = JOIN tempFilter BY stat_code, estacion_as BY station_code;
 group_ano = GROUP joincito BY $2;
 maxima = FOREACH group_ano GENERATE MAX(joincito.value);
 dump maxima;
+-- Se repite este codigo para obtener la máxima temperatura en cada año. No pudimos unir los dataset, pues los años estaban mal
+-- codificados, por lo que no era simple realizarlo.
